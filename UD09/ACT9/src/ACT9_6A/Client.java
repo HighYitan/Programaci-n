@@ -21,7 +21,7 @@ public class Client {
     @Override
     public String toString() {
         return "Nom i cognom: " + this.nom + " " + this.cognom + ", que té un telefon: " + this.telefon + 
-                ",\n un portatil: " + this.portatil + " i un televisor: " + this.televisor +
-                ",\n aquestes 3 coses tenen un preu total amb descomptes de: " + this.calculaPreuTotal();
+                ",\nun portatil: " + this.portatil + " i un televisor: " + this.televisor +
+                ",\naquestes 3 coses tenen un preu total amb descomptes de: " + this.calculaPreuTotal();
     }    
 }
