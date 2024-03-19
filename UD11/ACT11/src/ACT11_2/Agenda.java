@@ -1,6 +1,7 @@
 package ACT11_2;
 import java.time.LocalDate;
 import java.util.HashSet;
+import java.util.LinkedList; //
 import java.util.Queue;
 import java.util.Set;
 /**
@@ -12,9 +13,19 @@ public class Agenda {
     public Agenda(){
         
     }
-    public void afegeixDia(LocalDate data, Queue<String> atasques){
-        Dia dia = new Dia(data, atasques);
-        dies.add(dia);
+    //public void afegeixDia(LocalDate data, Queue<String> atasques){
+    public void afegeixDia(LocalDate data, String ... atasques){
+        Queue<String> tasques = new LinkedList<>();
+        for(String t : atasques){
+            tasques.offer(t);
+        }
+        if(cercaDia(data) == null){
+            Dia dia = new Dia(data, tasques);
+            dies.add(dia);
+        }
+        else{
+            
+        }
     }
     public Dia cercaDia(LocalDate data){
         for(Dia dia : dies){
