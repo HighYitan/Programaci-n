@@ -24,7 +24,7 @@ public class Agenda {
             dies.add(dia);
         }
         else{
-            
+            dies.add(cercaDia(data));
         }
     }
     public Dia cercaDia(LocalDate data){
