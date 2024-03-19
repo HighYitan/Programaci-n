@@ -32,10 +32,11 @@ public class Main {
         atasques.offer("Subir todo mi progreso a Github y sincronizarlo todo");
         agenda.afegeixDia(data, atasques);
         
+        data = LocalDate.of(2024, 1, 2);
         atasques = new LinkedList<>();
         atasques.offer("Matar gente");
         atasques.offer("Limpiar el desastre");
-        agenda.afegeixDia(LocalDate.of(2024, 1, 2), atasques);
+        agenda.afegeixDia(data, atasques);
         
         System.out.println(agenda.obteTasca(data));
     }   
