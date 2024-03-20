@@ -1,6 +1,7 @@
-package ACT11_2;
+package ACT11_2A;
 import java.time.LocalDate;
 import java.time.Month;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Queue;
 /**
@@ -36,26 +37,18 @@ public class Main {
         atasques.offer("Matar gente");
         atasques.offer("Limpiar el desastre");
         agenda.afegeixDia(data, atasques);*/
-        
+        Agenda agenda = new Agenda(new HashSet<>());
         LocalDate data = LocalDate.of(2024, 1, 1); 
-        Agenda agenda = new Agenda();
         agenda.afegeixDia(data, "Hacer los deberes", "Estudiar para el examen", "Completar una partida con el High Cultist en Conquest of Elysium 5");
         
         data = LocalDate.of(2024, 1, 2);
-        atasques.offer("Seguir probando cosas");
         agenda.afegeixDia(data, "Seguir probando cosas");
         
         data = LocalDate.of(2024, 1, 3);
-        atasques = new LinkedList<>();
-        atasques.offer("Terminar los últimos ejercicios");
-        atasques.offer("Subir todo mi progreso a Github y sincronizarlo todo");
-        agenda.afegeixDia(data, atasques);
+        agenda.afegeixDia(data, "Terminar los últimos ejercicios", "Subir todo mi progreso a Github y sincronizarlo todo");
         
         data = LocalDate.of(2024, 1, 2);
-        atasques = new LinkedList<>();
-        atasques.offer("Matar gente");
-        atasques.offer("Limpiar el desastre");
-        agenda.afegeixDia(data, atasques);
+        agenda.afegeixDia(data, "Matar gente", "Limpiar el desastre");
         
         System.out.println(agenda.obteTasca(data));
     }   

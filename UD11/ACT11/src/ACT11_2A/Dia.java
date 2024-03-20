@@ -1,4 +1,4 @@
-package ACT11_2;
+package ACT11_2A;
 import java.time.LocalDate;
 import java.util.Objects;
 import java.util.Queue;
@@ -43,8 +43,22 @@ public class Dia {
             return false;
         }
         return Objects.equals(this.tasques, other.tasques);*/
-        Dia dia = (Dia) obj;
-        return (this.data.equals(data) && this.tasques.equals(tasques));
+        /*Dia dia = (Dia) obj;
+        return (this.data.equals(data) && this.tasques.equals(tasques));*/
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Dia other = (Dia) obj;
+        return Objects.equals(this.data, other.data);
     }
-    
+    @Override
+    public String toString() {
+        return tasques.toString();
+    }
 }

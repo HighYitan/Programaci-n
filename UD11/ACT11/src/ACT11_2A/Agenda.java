@@ -1,4 +1,4 @@
-package ACT11_2;
+package ACT11_2A;
 import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.LinkedList; //
@@ -10,26 +10,29 @@ import java.util.Set;
  */
 public class Agenda {
     private Set<Dia> dies = new HashSet<>();
-    public Agenda(){
-        
+    public Agenda(Set<Dia> dies){
+        this.dies = dies;
     }
     //public void afegeixDia(LocalDate data, Queue<String> atasques){
     public void afegeixDia(LocalDate data, String ... atasques){
         Queue<String> tasques = new LinkedList<>();
-        for(String t : atasques){
-            tasques.offer(t);
-        }
-        if(cercaDia(data) == null){
-            Dia dia = new Dia(data, tasques);
-            dies.add(dia);
+        Dia dia = cercaDia(data);
+        if(dia == null){
+            for(String t : atasques){
+                tasques.offer(t);
+            }
+            Dia diaNuevo = new Dia(data, tasques);
+            dies.add(diaNuevo);
         }
         else{
-            dies.add(cercaDia(data));
+            for(String t : atasques){
+                dia.getTasques().offer(t);
+            }
         }
     }
     public Dia cercaDia(LocalDate data){
         for(Dia dia : dies){
-            if(dia.getData().equals(data)){
+            if(dia.getData().isEqual(data)){
                 return dia;
             }
         }
@@ -37,6 +40,6 @@ public class Agenda {
     }
     public String obteTasca(LocalDate data){
         Dia dia = cercaDia(data);
-        return dia.getTasques().peek();
+        return dia.getTasques().poll();
     }
 }
