@@ -15,6 +15,9 @@ public class Tasca {
     public LocalTime getHora(){
         return hora;
     }
+    public String getTasca(){
+        return tasca;
+    }
     @Override
     public int hashCode() {
         int hash = 5;
@@ -39,6 +42,11 @@ public class Tasca {
             return false;
         }
         return Objects.equals(this.hora, other.hora);
+    }
+
+    @Override
+    public String toString() {
+        return "Tasca{" + "hora=" + hora + ", tasca=" + tasca + '}';
     }
     
 }

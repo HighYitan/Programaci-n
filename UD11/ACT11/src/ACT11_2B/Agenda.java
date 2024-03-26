@@ -23,6 +23,8 @@ public class Agenda {
         List<Tasca> tasquesEnData = cercaDia(data);
         if(tasquesEnData == null){
             tasques.put(data, new ArrayList<>());
+            //tasquesEnData = cercaDia(data);
+            //tasquesEnData.add(new Tasca(hora, titol));
         }
         else{
             tasquesEnData.add(new Tasca(hora, titol));
@@ -50,9 +52,13 @@ public class Agenda {
         }
         
     }
-    public String obteTasca(LocalDate data){
-        if(tasques.containsKey(data)){
-            return tasques.get(data);
+    public String obteTasca(LocalDate data, LocalTime hora){
+        List<Tasca> tasquesEnData = cercaDia(data);
+        //String titol = "";
+        for(Tasca t : tasquesEnData){
+            if(t.getHora().equals(hora)){
+                return t.getTasca();
+            }
         }
         return null;
     }
