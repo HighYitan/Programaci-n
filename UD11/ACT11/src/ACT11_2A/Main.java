@@ -52,5 +52,5 @@ public class Main {
         agenda.afegeixDia(data, "Matar gente", "Limpiar el desastre");
         
         System.out.println(agenda.obteTasca(data));
-    }   
+    }
 }
