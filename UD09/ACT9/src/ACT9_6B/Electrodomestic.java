@@ -5,8 +5,8 @@ package ACT9_6B;
  */
 abstract class Electrodomestic extends Producte{
     private char classeEnergetica;
-    public Electrodomestic(String nom, double preu, double consumEnergetic, int gatantiaMesos, char classeEnergetica) {
-        super(nom, preu, consumEnergetic, gatantiaMesos);
+    public Electrodomestic(String nom, double preu, double consumEnergetic, int garantiaMesos, char classeEnergetica) {
+        super(nom, preu, consumEnergetic, garantiaMesos);
         this.classeEnergetica = classeEnergetica;
     }
     final double calculaSuplement(){

@@ -7,22 +7,22 @@ import java.util.Objects;
  */
 public class Tasca {
     private LocalTime hora;
-    private String tasca;
-    public Tasca(LocalTime hora, String tasca){
+    private String descripcio;
+    public Tasca(LocalTime hora, String descripcio){
         this.hora = hora;
-        this.tasca = tasca;
+        this.descripcio = descripcio;
     }
     public LocalTime getHora(){
         return hora;
     }
-    public String getTasca(){
-        return tasca;
+    public String getDescripcio(){
+        return descripcio;
     }
     @Override
     public int hashCode() {
         int hash = 5;
         hash = 31 * hash + Objects.hashCode(this.hora);
-        hash = 31 * hash + Objects.hashCode(this.tasca);
+        hash = 31 * hash + Objects.hashCode(this.descripcio);
         return hash;
     }
 
@@ -38,7 +38,7 @@ public class Tasca {
             return false;
         }
         final Tasca other = (Tasca) obj;
-        if (!Objects.equals(this.tasca, other.tasca)) {
+        if (!Objects.equals(this.descripcio, other.descripcio)) {
             return false;
         }
         return Objects.equals(this.hora, other.hora);
@@ -46,7 +46,7 @@ public class Tasca {
 
     @Override
     public String toString() {
-        return "Tasca{" + "hora=" + hora + ", tasca=" + tasca + '}';
+        return "Tasca{" + "hora=" + hora + ", tasca=" + descripcio + '}';
     }
     
 }

@@ -21,12 +21,9 @@ public class Dia {
     }
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 59 * hash + Objects.hashCode(this.data);
-        hash = 59 * hash + Objects.hashCode(this.tasques);
-        return hash;
+        return 31 * (Objects.hashCode(this.data));
     }
-
+    
     @Override
     public boolean equals(Object obj) {
         /*if (this == obj) {

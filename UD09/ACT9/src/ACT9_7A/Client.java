@@ -18,7 +18,7 @@ public class Client {
     @Override
     public String toString(){
         String text = "Nom i cognom de la persona: " + this.nom + " " + this.cognom +
-               "\nEls llibres prestats a aquesta persona son:";
+                      "\nEls llibres prestats a aquesta persona son:";
         for(Llibre llibrePrestat : llibresPrestats){
             text += "\n" + llibrePrestat;
         }

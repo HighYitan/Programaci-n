@@ -6,8 +6,8 @@ package ACT9_6B;
 abstract class Electronic extends Producte{
     private int midaPantalla, ram, hdd;
     private String processador;
-    public Electronic(String nom, double preu, double consumEnergetic, int gatantiaMesos, int midaPantalla, int ram, int hdd, String processador) {
-        super(nom, preu, consumEnergetic, gatantiaMesos);
+    public Electronic(String nom, double preu, double consumEnergetic, int garantiaMesos, int midaPantalla, int ram, int hdd, String processador) {
+        super(nom, preu, consumEnergetic, garantiaMesos);
         this.midaPantalla = midaPantalla;
         this.ram = ram;
         this.hdd = hdd;
@@ -20,7 +20,7 @@ abstract class Electronic extends Producte{
     @Override
     public String toString(){
         return super.toString() + ", la pantalla té una mida de: " + this.midaPantalla + ", té una memoria RAM de: " +
-               this.ram + "\n, una disc dur de " + this.hdd + "GB i un processador " + this.processador; 
+               this.ram + "\n, un disc dur de " + this.hdd + "GB i un processador " + this.processador; 
     }
     /*@Override
     public boolean equals(Object o){

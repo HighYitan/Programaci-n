@@ -57,7 +57,7 @@ public class Agenda {
         //String titol = "";
         for(Tasca t : tasquesEnData){
             if(t.getHora().equals(hora)){
-                return t.getTasca();
+                return t.getDescripcio();
             }
         }
         return null;

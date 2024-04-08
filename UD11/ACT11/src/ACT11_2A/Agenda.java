@@ -1,6 +1,5 @@
 package ACT11_2A;
 import java.time.LocalDate;
-import java.util.HashSet;
 import java.util.LinkedList; //
 import java.util.Queue;
 import java.util.Set;
@@ -9,7 +8,7 @@ import java.util.Set;
  * @author alumnat
  */
 public class Agenda {
-    private Set<Dia> dies = new HashSet<>();
+    private Set<Dia> dies;
     public Agenda(Set<Dia> dies){
         this.dies = dies;
     }
@@ -40,6 +39,11 @@ public class Agenda {
     }
     public String obteTasca(LocalDate data){
         Dia dia = cercaDia(data);
-        return dia.getTasques().poll();
+        if(dia != null){
+            return dia.getTasques().poll(); //Obtiene la primera tasca
+        }
+        else{
+            return null;
+        }
     }
 }

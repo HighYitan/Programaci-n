@@ -25,5 +25,15 @@ public class Modul {
     public String toString() {
         return "Modul{" + "nom=" + nom + ", numHores=" + numHores + ", matricula=" + matricula + '}';
     }
-    
+    /* Tomeu exemple
+    @Override
+    public String toString() {
+        String texte = "";
+        texte += "Modul{" + "nom=" + nom + ", horesSetmanals=" + horesSetmanals + ", matricula={";
+        for (Persona p : matricula) 
+            texte += "\n\t" + p.toString();
+        texte += '}';
+        
+        return texte;
+    }*/
 }

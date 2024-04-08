@@ -1,9 +1,9 @@
 package ACT11_2A;
 import java.time.LocalDate;
-import java.time.Month;
+//import java.time.Month;
 import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.Queue;
+//import java.util.LinkedList;
+//import java.util.Queue;
 /**
  *
  * @author alumnat
@@ -40,6 +40,7 @@ public class Main {
         Agenda agenda = new Agenda(new HashSet<>());
         LocalDate data = LocalDate.of(2024, 1, 1); 
         agenda.afegeixDia(data, "Hacer los deberes", "Estudiar para el examen", "Completar una partida con el High Cultist en Conquest of Elysium 5");
+        //agenda.afegeixDia(LocalDate.of(2024, 1, 1), "Tasca1","Tasca2","Tasca3"); Exemple tomeu
         
         data = LocalDate.of(2024, 1, 2);
         agenda.afegeixDia(data, "Seguir probando cosas");
