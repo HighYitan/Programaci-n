@@ -41,7 +41,6 @@ public class Main {
         Agenda agenda = new Agenda();
         LocalDate data = LocalDate.of(2024, 1, 1);
         LocalTime hora = LocalTime.of(10, 0, 0);
-        agenda.afegeixTasca(data, hora, null);
         agenda.afegeixTasca(data, hora, "Hacer los deberes");
         hora = LocalTime.of(12, 0, 0);
         agenda.afegeixTasca(data, hora, "Estudiar para el examen");
@@ -50,8 +49,9 @@ public class Main {
         
         data = LocalDate.of(2024, 1, 2);
         hora = LocalTime.of(10, 0, 0);
-        agenda.afegeixTasca(data, hora, null);
         agenda.afegeixTasca(data, hora, "Seguir probando cosas");
+        
+        
         
         //agenda.afegeixTasca(data, hora, "Hacer lso deberes");
         /*agenda.afegeixDia(data, "Hacer los deberes", "Estudiar para el examen", "Completar una partida con el High Cultist en Conquest of Elysium 5");
@@ -64,7 +64,9 @@ public class Main {
         
         data = LocalDate.of(2024, 1, 2);
         agenda.afegeixDia(data, "Matar gente", "Limpiar el desastre");*/
-        System.out.println(agenda.obteTasca(LocalDate.of(2024, Month.JANUARY, 1), LocalTime.of(10, 0, 0)));
+        System.out.println(agenda.obteTasca(LocalDate.of(2024, Month.JANUARY, 1), LocalTime.of(12, 0, 0)));
         System.out.println(agenda.obteTasca(data, hora));
+        
+        System.out.println(agenda.toString());
     }   
 }

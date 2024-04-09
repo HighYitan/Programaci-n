@@ -23,8 +23,8 @@ public class Agenda {
         List<Tasca> tasquesEnData = cercaDia(data);
         if(tasquesEnData == null){
             tasques.put(data, new ArrayList<>());
-            //tasquesEnData = cercaDia(data);
-            //tasquesEnData.add(new Tasca(hora, titol));
+            tasquesEnData = cercaDia(data);
+            tasquesEnData.add(new Tasca(hora, titol));
         }
         else{
             tasquesEnData.add(new Tasca(hora, titol));
@@ -32,10 +32,11 @@ public class Agenda {
         }
     }
     public List<Tasca> cercaDia(LocalDate data){
-        if(tasques.containsKey(data)){
+        /*if(tasques.containsKey(data)){ //No hace falta todo esto ya que .get ya nos retorna null si no hay valor asociado a la key o no existe la key.
             return this.tasques.get(data);
         }
-        return null;
+        return null;*/
+        return this.tasques.get(data);
     }
     public void eliminaTasca(LocalDate data, LocalTime hora){
         List<Tasca> tasquesEnData = cercaDia(data);
@@ -55,11 +56,25 @@ public class Agenda {
     public String obteTasca(LocalDate data, LocalTime hora){
         List<Tasca> tasquesEnData = cercaDia(data);
         //String titol = "";
-        for(Tasca t : tasquesEnData){
-            if(t.getHora().equals(hora)){
-                return t.getDescripcio();
+        if(tasquesEnData != null){
+            for(Tasca t : tasquesEnData){
+                if(t.getHora().equals(hora)){
+                    return t.getDescripcio();
+                }
             }
         }
         return null;
+    }
+    @Override
+    public String toString() {
+        String texte = "TASQUES: ";
+        for (Map.Entry<LocalDate, List<Tasca>> entry : this.tasques.entrySet()) {
+            List<Tasca> tasquesEnDia = this.tasques.get(entry.getKey());
+            texte += "\nData: " + entry.getKey();
+            for (Tasca tasca : tasquesEnDia) {
+                texte += "\n\t [ " + tasca.toString() + "  ]";
+            }
+        }
+        return texte;
     }
 }
