@@ -51,6 +51,16 @@ public class Main {
         hora = LocalTime.of(10, 0, 0);
         agenda.afegeixTasca(data, hora, "Seguir probando cosas");
         
+        data = LocalDate.of(2024, 1, 3);
+        hora = LocalTime.of(10, 0, 0);
+        agenda.afegeixTasca(data, hora, "Terminar los últimos ejercicios");
+        hora = LocalTime.of(12, 0, 0);
+        agenda.afegeixTasca(data, hora, "Subir todo mi progreso a Github y sincronizarlo todo");
+        
+        data = LocalDate.of(2024, 1, 2);
+        agenda.afegeixTasca(data, hora, "Matar gente");
+        hora = LocalTime.of(18, 0, 0);
+        agenda.afegeixTasca(data, hora, "Limpiar el desastre");
         
         
         //agenda.afegeixTasca(data, hora, "Hacer lso deberes");
