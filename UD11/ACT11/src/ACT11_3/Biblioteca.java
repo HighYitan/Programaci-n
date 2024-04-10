@@ -30,4 +30,39 @@ public class Biblioteca {
         }
         titolsDisponibles.get(titol).add(llibre);
     }
+    public Llibre cercaLlibreDisponible(String titol){
+        for(Llibre l : llibresDisponibles){
+            if(l.getTitol() == titol){
+                return l;
+            }
+        }
+        return null;
+    }
+    public void prestaLlibre(String titol){
+        Llibre llibre = cercaLlibreDisponible(titol);
+        if(llibre != null){
+            llibresDisponibles.remove(llibre);
+            llibresPrestats.offer(llibre);
+        }
+    }
+    public void tornaLlibre(){
+        Llibre llibre = llibresPrestats.poll();
+        llibresDisponibles.add(llibre);
+    }
+    public void mostraLlibresDisponibles(){
+        for(Llibre l : llibresDisponibles){
+            System.out.println(l.toString());
+        }
+    }
+    public void mostraTitolsDisponibles(){
+        for(String titol : titolsDisponibles.keySet()){
+            Llibre l = titolsDisponibles.get(titol);
+            
+        }
+    }
+    public void mostraLlibresPrestats(){
+        for(Llibre l : llibresPrestats){
+            System.out.println(l.toString());
+        }
+    }
 }

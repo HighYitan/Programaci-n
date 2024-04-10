@@ -13,12 +13,11 @@ public class Llibre {
         this.autor = autor;
         this.anyPublicacio = anyPublicacio;
     }
-
+    public String getTitol(){
+        return titol;
+    }
     @Override
     public String toString() {
         return "Llibre{" + "id=" + id + ", titol=" + titol + ", autor=" + autor + ", anyPublicacio=" + anyPublicacio + '}';
     }
-
-    
-    
 }
