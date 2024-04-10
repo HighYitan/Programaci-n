@@ -1,6 +1,6 @@
 package ACT11_2B;
 import java.time.LocalTime;
-import java.util.Objects;
+//import java.util.Objects;
 /**
  *
  * @author alumnat
@@ -18,7 +18,7 @@ public class Tasca {
     public String getDescripcio(){
         return descripcio;
     }
-    @Override
+    /*@Override
     public int hashCode() {
         int hash = 5;
         hash = 31 * hash + Objects.hashCode(this.hora);
@@ -42,7 +42,7 @@ public class Tasca {
             return false;
         }
         return Objects.equals(this.hora, other.hora);
-    }
+    }*/
 
     @Override
     public String toString() {
