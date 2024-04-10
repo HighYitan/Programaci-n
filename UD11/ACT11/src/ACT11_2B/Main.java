@@ -2,9 +2,9 @@ package ACT11_2B;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.Month;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.Queue;
+//import java.util.HashSet;
+//import java.util.LinkedList;
+//import java.util.Queue;
 /**
  *
  * @author alumnat
@@ -50,18 +50,14 @@ public class Main {
         data = LocalDate.of(2024, 1, 2);
         hora = LocalTime.of(10, 0, 0);
         agenda.afegeixTasca(data, hora, "Seguir probando cosas");
-        
         data = LocalDate.of(2024, 1, 3);
-        hora = LocalTime.of(10, 0, 0);
         agenda.afegeixTasca(data, hora, "Terminar los últimos ejercicios");
         hora = LocalTime.of(12, 0, 0);
         agenda.afegeixTasca(data, hora, "Subir todo mi progreso a Github y sincronizarlo todo");
-        
         data = LocalDate.of(2024, 1, 2);
         agenda.afegeixTasca(data, hora, "Matar gente");
         hora = LocalTime.of(18, 0, 0);
         agenda.afegeixTasca(data, hora, "Limpiar el desastre");
-        
         
         //agenda.afegeixTasca(data, hora, "Hacer lso deberes");
         /*agenda.afegeixDia(data, "Hacer los deberes", "Estudiar para el examen", "Completar una partida con el High Cultist en Conquest of Elysium 5");
@@ -75,7 +71,6 @@ public class Main {
         data = LocalDate.of(2024, 1, 2);
         agenda.afegeixDia(data, "Matar gente", "Limpiar el desastre");*/
         System.out.println(agenda.obteTasca(LocalDate.of(2024, Month.JANUARY, 1), LocalTime.of(12, 0, 0)));
-        System.out.println(agenda.obteTasca(data, hora));
         
         System.out.println(agenda.toString());
     }   
