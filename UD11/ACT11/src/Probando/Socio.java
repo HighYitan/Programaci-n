@@ -26,16 +26,19 @@ public class Socio extends ArrayList{
     @Override
     public boolean add(Object e){
         Socio s = (Socio) e;
-        if(!this.equals(s) && this.hashCode() != s.hashCode()){     
+        if(!this.equals(s) && this.hashCode() != s.hashCode()){
             return true;
         }
         return false;
     }
+
     @Override
     public int hashCode() {
         int hash = 7;
+        hash = 79 * hash + Objects.hashCode(this.nom);
         return hash;
     }
+    
 
     @Override
     public boolean equals(Object obj) {

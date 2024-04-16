@@ -17,7 +17,7 @@ public class Biblioteca {
     private Set<Llibre> llibresDisponibles;
     private Queue<Llibre> llibresPrestats;
     private Map<String, List<Llibre>> titolsDisponibles;
-    public Biblioteca(Set<Llibre> llibresDisponibles, Queue<Llibre> llibresPrestats, Map<String, List<Llibre>> titolsDisponibles){
+    public Biblioteca(){
         this.llibresDisponibles = new HashSet<>();
         this.llibresPrestats = new LinkedList<>();
         this.titolsDisponibles = new HashMap<>();
@@ -47,7 +47,9 @@ public class Biblioteca {
     }
     public void tornaLlibre(){
         Llibre llibre = llibresPrestats.poll();
-        llibresDisponibles.add(llibre);
+        if(llibre != null){
+            llibresDisponibles.add(llibre);
+        }
     }
     public void mostraLlibresDisponibles(){
         for(Llibre l : llibresDisponibles){
@@ -56,8 +58,7 @@ public class Biblioteca {
     }
     public void mostraTitolsDisponibles(){
         for(String titol : titolsDisponibles.keySet()){
-            Llibre l = titolsDisponibles.get(titol);
-            
+            System.out.println(titolsDisponibles.get(titol).toString());
         }
     }
     public void mostraLlibresPrestats(){

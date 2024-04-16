@@ -1,5 +1,6 @@
-package ACT11_3;
-
+package ACT11_4;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -10,16 +11,23 @@ public class Llibre {
     private int id;
     private String titol, autor;
     private int anyPublicacio;
+    private List<Anomalia> anomalies;
     public Llibre(int id, String titol, String autor, int anyPublicacio){
         this.id = id;
         this.titol = titol;
         this.autor = autor;
         this.anyPublicacio = anyPublicacio;
+        this.anomalies = new ArrayList<>();
     }
     public String getTitol(){
         return titol;
     }
-
+    public int getId(){
+        return id;
+    }
+    public List<Anomalia> getAnomalies(){
+        return anomalies;
+    }
     @Override
     public int hashCode() {
         int hash = 7;
@@ -44,6 +52,12 @@ public class Llibre {
     
     @Override
     public String toString() {
-        return "Llibre{" + "id=" + id + ", titol=" + titol + ", autor=" + autor + ", anyPublicacio=" + anyPublicacio + '}';
+        String text = "Llibre{" + "id=" + id + ", titol=" + titol + ", autor=" + autor + ", anyPublicacio=" + anyPublicacio + '}';
+        text += " Anomalies: {";
+        for(Anomalia a : anomalies){
+            text += a.getDescripcio() + " ";
+        }
+        text += "}";
+        return text;
     }
 }
