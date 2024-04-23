@@ -18,11 +18,11 @@ public class Main {
         Map<String, String> mapa = new HashMap<>();
         boolean trobat = false;
         int contador = 0;
-        File arxiu = new File("/home/alumnat/Escriptori/temp/ACT12_2.cfg");
+        File arxiu = new File("/home/alumnat/Escriptori/temp/ACT12_1.cfg");
         try(BufferedReader lector = new BufferedReader(new FileReader(arxiu))){
             String linia;
             while((linia = lector.readLine()) != null){
-                if(!linia.trim().substring(0, 1).equals("#") && !(linia.isBlank())){
+                if(!linia.trim().substring(0, 1).equals("#") && !(linia.isEmpty())){
                     String clau = linia.substring(0, linia.indexOf("=")).trim();
                     String valor = linia.substring(linia.indexOf("="), linia.length()).trim();
                     /*String[] parts = linia.split("=");
