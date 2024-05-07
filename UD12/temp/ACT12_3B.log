@@ -1,0 +1,32 @@
+Fecha y hora | Dirección IP de origen | Puerto de origen | Dirección IP de destino | Puerto de destino | Acción
+--------------------------------------------------------------------------------------------------------------------
+2024-04-21 10:00:15 | 192.168.1.100 | 22 | 203.0.113.5 | 22 | Intento de inicio de sesión SSH fallido
+2024-04-21 10:05:32 | 203.0.113.10 | 3389 | 192.168.1.50 | 3389 | Intento de conexión RDP exitoso
+2024-04-21 10:10:45 | 192.168.1.150 | 80 | 203.0.113.15 | 8080 | Acceso a puerto no autorizado
+2024-04-21 10:15:20 | 203.0.113.20 | 21 | 192.168.1.200 | 21 | Escaneo de puertos detectado
+2024-04-21 10:17:50 | 203.0.113.25 | 445 | 192.168.1.250 | 445 | Intento de ataque SMB bloqueado por el firewall
+2024-04-21 10:20:05 | 203.0.113.30 | 1433 | 192.168.1.10 | 1433 | Intento de acceso a base de datos SQL detectado
+2024-04-21 10:25:30 | 192.168.1.70 | 22 | 203.0.113.35 | 22 | Intento de inicio de sesión SSH exitoso
+2024-04-21 10:30:12 | 203.0.113.40 | 3306 | 192.168.1.80 | 3306 | Intento de acceso a base de datos MySQL bloqueado por regla de firewall
+2024-04-21 10:40:15 | 192.168.1.102 | 22 | 203.0.113.6 | 22 | Intento de inicio de sesión SSH fallido
+2024-04-21 10:45:32 | 203.0.113.11 | 3389 | 192.168.1.51 | 3389 | Intento de conexión RDP exitoso
+2024-04-21 10:50:45 | 192.168.1.151 | 80 | 203.0.113.16 | 8080 | Acceso a puerto no autorizado
+2024-04-21 10:55:20 | 203.0.113.21 | 21 | 192.168.1.201 | 21 | Escaneo de puertos detectado
+2024-04-21 10:57:50 | 203.0.113.26 | 445 | 192.168.1.251 | 445 | Intento de ataque SMB bloqueado por el firewall
+2024-04-21 11:00:05 | 203.0.113.31 | 1433 | 192.168.1.11 | 1433 | Intento de acceso a base de datos SQL detectado
+2024-04-21 11:05:30 | 192.168.1.71 | 22 | 203.0.113.36 | 22 | Intento de inicio de sesión SSH exitoso
+2024-04-21 11:10:12 | 203.0.113.41 | 3306 | 192.168.1.81 | 3306 | Intento de acceso a base de datos MySQL bloqueado por regla de firewall
+2024-04-21 11:20:15 | 192.168.1.103 | 22 | 203.0.113.7 | 22 | Intento de inicio de sesión SSH fallido
+2024-04-21 11:25:32 | 203.0.113.12 | 3389 | 192.168.1.52 | 3389 | Intento de conexión RDP exitoso
+2024-04-21 11:30:45 | 192.168.1.152 | 80 | 203.0.113.17 | 8080 | Acceso a puerto no autorizado
+2024-04-21 11:35:20 | 203.0.113.22 | 21 | 192.168.1.202 | 21 | Escaneo de puertos detectado
+2024-04-21 11:37:50 | 203.0.113.27 | 445 | 192.168.1.252 | 445 | Intento de ataque SMB bloqueado por el firewall
+2024-04-21 11:40:05 | 203.0.113.32 | 1433 | 192.168.1.12 | 1433 | Intento de acceso a base de datos SQL detectado
+2024-04-21 11:45:30 | 192.168.1.72 | 22 | 203.0.113.37 | 22 | Intento de inicio de sesión SSH exitoso
+2024-04-21 11:50:12 | 203.0.113.42 | 3306 | 192.168.1.82 | 3306 | Intento de acceso a base de datos MySQL bloqueado por regla de firewall
+2024-04-21 12:00:15 | 192.168.1.104 | 22 | 203.0.113.8 | 22 | Intento de inicio de sesión SSH fallido
+2024-04-21 12:05:32 | 203.0.113.13 | 3389 | 192.168.1.53 | 3389 | Intento de conexión RDP exitoso
+2024-04-21 12:10:45 | 192.168.1.153 | 80 | 203.0.113.18 | 8080 | Acceso a puerto no autorizado
+2024-04-21 12:15:20 | 203.0.113.23 | 21 | 192.168.1.203 | 21 | Escaneo de puertos detectado
+2024-04-21 12:17:50 | 203.0.113.28 | 445 | 192.168.1.253 | 445 | Intento de ataque SMB bloqueado por el firewall
+2024-04-21 12:20:05 | 203.0.113.33 | 1433 | 192.168.1.13 | 1433 | Intento de acceso a base de datos SQL detectado
