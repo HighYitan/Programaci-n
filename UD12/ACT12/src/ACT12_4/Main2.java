@@ -1,39 +1,36 @@
 package ACT12_4;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-
+/**
+ *
+ * @author alumnat
+ */
 public class Main2 {
+    /**
+     * @param args the command line arguments
+     */
     public static void main(String[] args) {
-        // Dades de la connexió:
         String servidor = "jdbc:mysql://localhost:3306/";
         String bdades = "gbd";
         String usuari = "root";
         String passwd = "";
-        String sql = "SELECT employee_id, last_name, first_name FROM employees";
-
-        // Establir la connexió
-        try ( Connection connexio = DriverManager.getConnection(servidor+bdades, usuari, passwd);
-              Statement statement = connexio.createStatement();
-              ResultSet resultSet = statement.executeQuery(sql)) {
-
-            System.out.println("Connexió amb la base de dades MySQL exitosa.");
+        int departmentId = 80;
+        String sql = "SELECT department_id, department_name FROM departments WHERE department_id = " + departmentId;
+        try(Connection connexio = DriverManager.getConnection(servidor+bdades, usuari, passwd);
+            Statement statement = connexio.createStatement();
+            ResultSet resultSet = statement.executeQuery(sql)){
             
-            // Processar els resultats de la Query
-            System.out.println("ID\tLlinatge, nom");
-            while (resultSet.next()) {
-                System.out.println( resultSet.getInt("employee_id") + "\t" + 
-                                    resultSet.getString("last_name") + ", " + 
-                                    resultSet.getString("first_name")
-                                  );
+            System.out.println("ID\tNom del departament");
+            while(resultSet.next()){
+                System.out.println(resultSet.getInt("department_id") + "\t" +
+                                   resultSet.getString("department_name"));
             }
-
-            System.out.println("Connexió tancada.");
-        } catch (SQLException e) {
-            System.err.println("Error al conectarse a la base de dades: " + e.getMessage());
+        }
+        catch(SQLException e){
+            System.err.println(e.getMessage());
         }
     }
 }
