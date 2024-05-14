@@ -1,0 +1,12 @@
+DEPARTMENT_ID;DEPARTMENT_NAME;MANAGER_ID;LOCATION_ID
+401;Customer Service;101;1800
+402;Product Development;110;1700
+403;Employee Relations;120;2400
+404;Distribution;120;1500
+405;Facilities;100;2100
+406;Security;100;2500
+407;Quality Control;100;2400
+408;Inventory Management;100;2300
+409;Data Management;100;1900
+410;Research & Analisys;100;1700
+

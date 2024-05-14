@@ -1,0 +1,6 @@
+# Variables connexió
+SERVER = jdbc:mysql://localhost:3306/
+DBASE = gbd
+USER = root
+PASSWD = 
+
