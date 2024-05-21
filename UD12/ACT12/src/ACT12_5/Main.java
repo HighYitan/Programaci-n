@@ -4,6 +4,11 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
 /**
  *
@@ -74,5 +79,37 @@ public class Main {
         catch(Exception e){
             System.err.println(e.getMessage());
         }
+    }
+    public static Connection getConnectionFromFile(String sqlLin) throws SQLException, IOException{
+        String servidor = "", bdades = "", usuari = "", passwd = "";
+        try(BufferedReader reader = new BufferedReader(new FileReader(sqlLin))){
+            String line;
+            while((line = reader.readLine()) != null){
+                try{
+                    String[] parts = line.split("=");
+                    String clau = parts[0].trim();
+                    String valor = parts[1].trim();
+                    switch(clau){
+                        case "SERVER" -> servidor = valor;
+                        case "DBASE" -> bdades = valor;
+                        case "USER" -> usuari = valor;
+                        case "PASSWD" -> passwd = valor;
+                        default -> System.err.println("Clau no vàlida: " + clau);
+                    }
+                }
+                catch(IndexOutOfBoundsException e){
+                    // En cas de '#', l'split no fnciona
+                    // No fer res                    
+                }
+            }
+        }
+        catch(IOException e){
+            System.err.println(e.getMessage());
+            throw e;
+        }
+        return DriverManager.getConnection(servidor+bdades, usuari, passwd);
+    }
+    public static void insertDepartmentsFromFile(Connection connexio, String lin){
+        
     }
 }
