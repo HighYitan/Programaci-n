@@ -112,4 +112,9 @@ public class Main {
     public static void insertDepartmentsFromFile(Connection connexio, String lin){
         
     }
+    private static void SQLInsert(Connection connexio, String table, String... valors) throws SQLException{
+        String sql = "";
+        PreparedStatement statement;
+        
+    }
 }
