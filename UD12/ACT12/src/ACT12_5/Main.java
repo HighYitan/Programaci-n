@@ -117,4 +117,19 @@ public class Main {
         PreparedStatement statement;
         
     }
+    private static boolean SQLCheckPK(Connection connexio, String table, int primaryKey) throws SQLException{
+        String sql = "";
+        try{
+            if(table.equals("employees")){
+                sql = "SELECT '1' FROM employees WHERE employee_id = ?";
+            }
+            else if(table.equals("locations")){
+                sql = "SELECT '1' FROM locations WHERE location_id = ?";
+            }
+        }
+        catch(SQLException e){
+            throw new SQLException (e.getMessage() );
+        }
+        return false;
+    }
 }
