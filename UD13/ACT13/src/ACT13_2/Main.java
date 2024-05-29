@@ -1,4 +1,4 @@
-package ACT13_1;
+package ACT13_2;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -40,7 +40,7 @@ public class Main {
         
         JLabel miJLabel = new JLabel("");
         miJLabel.setBounds(10, 200, 250, 20);
-        /*miJButtonSuma.addActionListener(new ActionListener(){ //13_2
+        miJButtonSuma.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e){
                 int resultado = Integer.parseInt(text1.getText()) + Integer.parseInt(text2.getText());
@@ -72,7 +72,7 @@ public class Main {
             @Override
             public void mouseExited(MouseEvent e) {
             }
-        });*/
+        });
         
         miJPanel.add(text1);
         miJPanel.add(text2);
